@@ -2,6 +2,8 @@
 
 ## 当前成果导航（2026-10-22）
 
+- 最新专题：[字段发现、双向索引与排障](field-discovery-and-troubleshooting.md)：按用户晚间补充收敛到“找字段”和跨系统反查；来源见 discovery-sources.json，新增 12 项验收设计尚未执行。
+
 - [前沿方法比较与合成演示](frontier-rag-methods.md)：含 2026 年候选论文，未复现论文。
 - [连接器与证据契约](connector-evidence-contract.md)：跨系统取证与四层验证。
 - frontier-sources.json：方法和契约来源、阅读深度与局限。

@@ -1,0 +1,123 @@
+{
+  "kind": "acceptance_design_not_executed",
+  "created_at": "2026-10-22",
+  "fixture_origin": "synthetic_scenario_descriptions_only",
+  "status": "not_run",
+  "real_fixtures_available": false,
+  "cases": [
+    {
+      "id": "D01",
+      "name": "中文业务词找字段",
+      "setup": "实际到账金额；目录字段仅有缩写，关联文档使用中文术语",
+      "expected": "召回有语义证据的字段及其完整路径，区分订单明细与日汇总",
+      "forbidden": "仅因 amount 词相似就确定唯一字段",
+      "status": "not_run",
+      "result": null
+    },
+    {
+      "id": "D02",
+      "name": "跨环境同名",
+      "setup": "测试与生产实例存在相同库表字段名",
+      "expected": "分别显示获授权候选，未确认环境前保留歧义",
+      "forbidden": "合并为一个字段",
+      "status": "not_run",
+      "result": null
+    },
+    {
+      "id": "D03",
+      "name": "文档层级不等于规则继承",
+      "setup": "同父页的两个子页规则适用对象不同",
+      "expected": "只将父路径用作检索线索，依据明确适用范围绑定规则",
+      "forbidden": "让父页规则无条件覆盖全部子对象",
+      "status": "not_run",
+      "result": null
+    },
+    {
+      "id": "D04",
+      "name": "长字段表与页尾",
+      "setup": "目标定义在超过索引片段预算的页尾",
+      "expected": "报告截断并回取对应区域或输出证据不足",
+      "forbidden": "页面读取成功就宣布全部已索引或没有字段说明",
+      "status": "not_run",
+      "result": null
+    },
+    {
+      "id": "D05",
+      "name": "表格行列绑定",
+      "setup": "相邻字段的含义不同，含合并表头",
+      "expected": "保留表头与目标行定位，支持正确字段",
+      "forbidden": "将相邻行说明赋给目标字段",
+      "status": "not_run",
+      "result": null
+    },
+    {
+      "id": "D06",
+      "name": "双向索引一致",
+      "setup": "同一规则关联多个字段，字段关联多个文档",
+      "expected": "两个方向引用相同 relation ID、源版本及适用范围",
+      "forbidden": "在两个方向维护互相矛盾的复制记录",
+      "status": "not_run",
+      "result": null
+    },
+    {
+      "id": "D07",
+      "name": "页面移动与修订",
+      "setup": "页面原生 ID 不变但目录移动，正文规则另有版本更新",
+      "expected": "更新路径上下文；失效旧派生关联并重验新版",
+      "forbidden": "路径变化创建重复对象或规则更新后继续用旧关联",
+      "status": "not_run",
+      "result": null
+    },
+    {
+      "id": "D08",
+      "name": "重命名不确定",
+      "setup": "旧字段消失，新字段名字相似但没有变更证据",
+      "expected": "输出待确认重命名候选及证据缺口",
+      "forbidden": "断言两个字段身份相同",
+      "status": "not_run",
+      "result": null
+    },
+    {
+      "id": "D09",
+      "name": "采集覆盖不足",
+      "setup": "目录分页未结束或 source 超时，字段未命中",
+      "expected": "限定检索范围并标记 unknown/incomplete",
+      "forbidden": "断言源字段已删除",
+      "status": "not_run",
+      "result": null
+    },
+    {
+      "id": "D10",
+      "name": "上游已清洗",
+      "setup": "下游 SQL 未过滤，但上游任务有对应过滤证据",
+      "expected": "沿已知血缘核对对象和时间后解释规则实现位置",
+      "forbidden": "把下游未过滤直接报为错误",
+      "status": "not_run",
+      "result": null
+    },
+    {
+      "id": "D11",
+      "name": "运行异常不等于根因",
+      "setup": "某任务失败，但用户查询消费的是另一个成功快照",
+      "expected": "区分运行异常与问题归因，核对消费快照和水位",
+      "forbidden": "将无关失败直接宣布为根因",
+      "status": "not_run",
+      "result": null
+    },
+    {
+      "id": "D12",
+      "name": "权限与缓存",
+      "setup": "用户撤权后旧答案缓存仍有片段与对象名",
+      "expected": "展示前重验权限，不暴露已撤权内容或隐藏对象",
+      "forbidden": "用旧证据包绕过当前授权",
+      "status": "not_run",
+      "result": null
+    }
+  ],
+  "execution_requirements": [
+    "建立冻结语料与字段目录夹具，保存源版本、权限和索引覆盖状态。",
+    "由熟悉试点业务的人标注可接受对象、关系和必要证据。",
+    "自动机械检查与人工语义检查分开统计；不以字符串包含代表语义通过。",
+    "记录模型、连接器、预算、运行环境与失败样本。"
+  ]
+}

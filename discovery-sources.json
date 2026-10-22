@@ -1,0 +1,78 @@
+{
+  "updated_at": "2026-10-22",
+  "execution": "external_codex_web_research",
+  "skill": "project deep-survey",
+  "review": "self-review",
+  "enterprise_system_access": false,
+  "experiments_run": false,
+  "sources": [
+    {
+      "id": "D1",
+      "title": "Confluence Cloud Descendants",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-descendants/",
+      "version": "Cloud REST v2，动态文档",
+      "reading_depth": "Get descendants of page 正文",
+      "claim_and_boundary": "按 depth/cursor 读取层级，正文需另取；不推断企业数据库目录",
+      "read_at": "2026-10-22"
+    },
+    {
+      "id": "D2",
+      "title": "How to get page content or child list via REST API",
+      "url": "https://support.atlassian.com/confluence/kb/how-to-get-page-content-or-child-list-via-rest-api/",
+      "version": "Data Center 官方 KB，动态文档",
+      "reading_depth": "部署范围与读取示例",
+      "claim_and_boundary": "Data Center 页面和子页读取参考；用户部署未知",
+      "read_at": "2026-10-22"
+    },
+    {
+      "id": "D3",
+      "title": "DataHub Context Documents",
+      "url": "https://docs.datahub.com/docs/features/feature-guides/context/context-documents",
+      "version": "页面标记 1.7.0，动态文档",
+      "reading_depth": "Related Assets、Importing、Ask DataHub 段",
+      "claim_and_boundary": "关联资产、单向导入与 External 模式；不是自动完成字段映射",
+      "read_at": "2026-10-22"
+    },
+    {
+      "id": "D4",
+      "title": "DataHub MCP Server",
+      "url": "https://docs.datahub.com/docs/features/feature-guides/mcp",
+      "version": "页面标记 1.7.0，动态文档",
+      "reading_depth": "只读工具段",
+      "claim_and_boundary": "list_schema_fields 支持分页筛选，get_lineage 可查已有血缘；实际部署可用性待核实",
+      "read_at": "2026-10-22"
+    },
+    {
+      "id": "D5",
+      "title": "DataHub Confluence source",
+      "url": "https://docs.datahub.com/docs/generated/ingestion/sources/confluence",
+      "version": "页面标记 1.7.0，Alpha / Cloud private beta 描述",
+      "reading_depth": "Overview、层级、限制及配置正文",
+      "claim_and_boundary": "有截断嵌入只告警的行为；版本/部署/权限需验证，未安装",
+      "read_at": "2026-10-22"
+    },
+    {
+      "id": "D6",
+      "title": "Aurum: A Data Discovery System",
+      "url": "https://raulcastrofernandez.com/papers/icde18-aurum.pdf",
+      "version": "ICDE 2018 作者稿",
+      "reading_depth": "摘要与引言",
+      "claim_and_boundary": "关系导航和数据发现研究；画像路线涉及数据读取，未复现",
+      "read_at": "2026-10-22"
+    },
+    {
+      "id": "D7",
+      "title": "Import from Confluence",
+      "url": "https://docs.datahub.com/docs/features/feature-guides/context/import-confluence",
+      "version": "页面标记 1.7.0，动态文档",
+      "reading_depth": "正文",
+      "claim_and_boundary": "Cloud/Data Center 接入前提、导入模式与不支持写回；部署资格以具体连接器限制核实",
+      "read_at": "2026-10-22"
+    }
+  ],
+  "limitations": [
+    "未固定动态官方文档的源码提交。",
+    "Data Center v900 descendant 页面正文提取不完整，未以该页推断具体接口细节。",
+    "已核查的公开产品能力不是用户平台已具备的能力。"
+  ]
+}

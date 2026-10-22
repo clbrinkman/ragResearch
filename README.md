@@ -4,6 +4,8 @@
 
 背景：Confluence 基本完整保存表来源、字段语义、清洗规则和跨库解释；难点是规模与跨系统关联，不要求人工重新整理全库语义字典。目录自动定位知识，检索按问题扩展关系，回答逐结论保留来源与版本。
 
+最新专题：[字段发现、双向索引与排障](field-discovery-and-troubleshooting.md)，针对不熟悉数据库结构的用户，设计业务词找字段、字段反查文档和有证据的排障。新增来源见 [discovery-sources.json](discovery-sources.json)，[12 项发现与反查验收设计](discovery-evaluation-cases.json) 尚未执行。
+
 ## 阅读顺序
 
 1. [当前问题与范围](cross-system-retrieval.md)
@@ -39,4 +41,4 @@ python3 prototype/evidence_chain.py
 
 ## 研究记录
 
-材料在 2026-10-20 至 2026-10-22 整理，按本地科研台的 deep-survey 规范由 Codex 联网调研并自审。科研台内模型未执行。本仓库保存研究成果和可复现的合成演示，不包含本机凭据、科研台会话存储或运行配置。
+材料在 2026-10-20 至 2026-10-23 整理，按本地科研台的 deep-survey 规范由 Codex 联网调研并自审。科研台内模型未执行。本仓库保存研究成果和可复现的合成演示，不包含本机凭据、科研台会话存储或运行配置。

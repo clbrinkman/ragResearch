@@ -1,0 +1,200 @@
+{
+  "survey_date": "2026-10-20",
+  "executor": "Codex web research; imported into Research Harness",
+  "source_groups": [
+    {
+      "id": "S1",
+      "references": [
+        {
+          "title": "Lewis et al., RAG, 2020",
+          "url": "https://arxiv.org/abs/2005.11401"
+        }
+      ],
+      "accessed_on": "2026-10-20",
+      "evidence_depth": "abstract_and_or_author_repository",
+      "independently_reproduced": false,
+      "notes": "结论适用范围见 survey.md；未做效果复现"
+    },
+    {
+      "id": "S2",
+      "references": [
+        {
+          "title": "Asai et al., Self-RAG, 2023",
+          "url": "https://arxiv.org/abs/2310.11511"
+        }
+      ],
+      "accessed_on": "2026-10-20",
+      "evidence_depth": "abstract_and_or_author_repository",
+      "independently_reproduced": false,
+      "notes": "结论适用范围见 survey.md；未做效果复现"
+    },
+    {
+      "id": "S3",
+      "references": [
+        {
+          "title": "Yan et al., Corrective RAG，正文 v3",
+          "url": "https://arxiv.org/html/2401.15884v3"
+        }
+      ],
+      "accessed_on": "2026-10-20",
+      "evidence_depth": "paper_body_consulted",
+      "independently_reproduced": false,
+      "notes": "结论适用范围见 survey.md；未做效果复现"
+    },
+    {
+      "id": "S4",
+      "references": [
+        {
+          "title": "Vu et al., FreshLLMs",
+          "url": "https://arxiv.org/abs/2310.03214"
+        },
+        {
+          "title": "FreshQA 作者仓库",
+          "url": "https://github.com/freshllms/freshqa"
+        }
+      ],
+      "accessed_on": "2026-10-20",
+      "evidence_depth": "abstract_and_or_author_repository",
+      "independently_reproduced": false,
+      "notes": "结论适用范围见 survey.md；未做效果复现"
+    },
+    {
+      "id": "S5",
+      "references": [
+        {
+          "title": "Adaptive-RAG，正文 v2",
+          "url": "https://arxiv.org/html/2403.14403v2"
+        }
+      ],
+      "accessed_on": "2026-10-20",
+      "evidence_depth": "paper_body_consulted",
+      "independently_reproduced": false,
+      "notes": "结论适用范围见 survey.md；未做效果复现"
+    },
+    {
+      "id": "S6",
+      "references": [
+        {
+          "title": "Search-R1",
+          "url": "https://arxiv.org/abs/2503.09516"
+        },
+        {
+          "title": "作者仓库",
+          "url": "https://github.com/PeterGriffinJin/Search-R1"
+        }
+      ],
+      "accessed_on": "2026-10-20",
+      "evidence_depth": "abstract_and_or_author_repository",
+      "independently_reproduced": false,
+      "notes": "结论适用范围见 survey.md；未做效果复现"
+    },
+    {
+      "id": "S7",
+      "references": [
+        {
+          "title": "Comprehensive RAG Benchmark",
+          "url": "https://arxiv.org/abs/2406.04744"
+        }
+      ],
+      "accessed_on": "2026-10-20",
+      "evidence_depth": "abstract_and_or_author_repository",
+      "independently_reproduced": false,
+      "notes": "结论适用范围见 survey.md；未做效果复现"
+    },
+    {
+      "id": "S8",
+      "references": [
+        {
+          "title": "BrowseComp",
+          "url": "https://arxiv.org/abs/2504.12516"
+        }
+      ],
+      "accessed_on": "2026-10-20",
+      "evidence_depth": "abstract_and_or_author_repository",
+      "independently_reproduced": false,
+      "notes": "结论适用范围见 survey.md；未做效果复现"
+    },
+    {
+      "id": "S9",
+      "references": [
+        {
+          "title": "Pathway 官方产品说明",
+          "url": "https://pathway.com/framework/products"
+        }
+      ],
+      "accessed_on": "2026-10-20",
+      "evidence_depth": "official_documentation",
+      "independently_reproduced": false,
+      "notes": "结论适用范围见 survey.md；未做效果复现"
+    },
+    {
+      "id": "S10",
+      "references": [
+        {
+          "title": "Haystack SearchApiWebSearch，文档版本 3.3",
+          "url": "https://docs.haystack.deepset.ai/docs/3.3/searchapiwebsearch"
+        }
+      ],
+      "accessed_on": "2026-10-20",
+      "evidence_depth": "official_documentation",
+      "independently_reproduced": false,
+      "notes": "结论适用范围见 survey.md；未做效果复现"
+    },
+    {
+      "id": "S11",
+      "references": [
+        {
+          "title": "Haystack LinkContentFetcher，文档版本 3.2",
+          "url": "https://docs.haystack.deepset.ai/docs/3.2/linkcontentfetcher"
+        }
+      ],
+      "accessed_on": "2026-10-20",
+      "evidence_depth": "official_documentation",
+      "independently_reproduced": false,
+      "notes": "结论适用范围见 survey.md；未做效果复现"
+    },
+    {
+      "id": "S12",
+      "references": [
+        {
+          "title": "TimelyRAG，v1，2026-09",
+          "url": "https://arxiv.org/abs/2609.11572v1"
+        },
+        {
+          "title": "作者仓库",
+          "url": "https://github.com/kaist-dmlab/TimelyRAG"
+        }
+      ],
+      "accessed_on": "2026-10-20",
+      "evidence_depth": "abstract_and_or_author_repository",
+      "independently_reproduced": false,
+      "notes": "2026 预印本；本次为摘要级核对，待阅读全文与复现"
+    },
+    {
+      "id": "S13",
+      "references": [
+        {
+          "title": "Temporal Validity in Retrieval Memory，v1，2026-06",
+          "url": "https://arxiv.org/abs/2606.26511v1"
+        }
+      ],
+      "accessed_on": "2026-10-20",
+      "evidence_depth": "abstract_and_or_author_repository",
+      "independently_reproduced": false,
+      "notes": "2026 预印本；本次为摘要级核对，待阅读全文与复现"
+    },
+    {
+      "id": "S14",
+      "references": [
+        {
+          "title": "When Does Streaming Tool Use Help?，v2，2026-06",
+          "url": "https://arxiv.org/abs/2606.20113v2"
+        }
+      ],
+      "accessed_on": "2026-10-20",
+      "evidence_depth": "abstract_and_or_author_repository",
+      "independently_reproduced": false,
+      "notes": "2026 预印本；本次为摘要级核对，待阅读全文与复现"
+    }
+  ]
+}

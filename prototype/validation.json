@@ -1,0 +1,63 @@
+{
+  "run_id": "synthetic-evidence-contract-20261021",
+  "kind": "deterministic_contract_checks",
+  "command": "python3 prototype/evidence_chain.py",
+  "seed": "not applicable; deterministic",
+  "dataset": "synthetic_fixture.json; hand-authored demo, not held-out benchmark",
+  "source_sha256": "5190a6b8fa1a1ba2b3c8c7a3482ed44c297aa6b0c931c03e418687eb48a52a0a",
+  "fixture_sha256": "83e776fdaf6e8ac64796ade163105a555abb3109890c0606780e9242cc0b6f77",
+  "python": "3.11.4 (v3.11.4:d2340ef257, Jun  6 2023, 19:15:51) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "started_at": "2026-10-21T15:19:09.149006+00:00",
+  "finished_at": "2026-10-21T15:19:09.162779+00:00",
+  "exit_code": 0,
+  "checks": [
+    {
+      "case": "multi_system_chain",
+      "status": "pass"
+    },
+    {
+      "case": "same_name_not_merged",
+      "status": "pass"
+    },
+    {
+      "case": "inaccessible_bridge_blocks_descendants",
+      "status": "pass"
+    },
+    {
+      "case": "no_inaccessible_source_in_payload",
+      "status": "pass"
+    },
+    {
+      "case": "stale_version_blocks_branch",
+      "status": "pass"
+    },
+    {
+      "case": "validity_end_exclusive",
+      "status": "pass"
+    },
+    {
+      "case": "fabricated_quote_blocks_edge",
+      "status": "pass"
+    },
+    {
+      "case": "budget_bound",
+      "status": "pass"
+    },
+    {
+      "case": "cycle_terminates",
+      "status": "pass"
+    },
+    {
+      "case": "no_permission_no_evidence",
+      "status": "pass"
+    },
+    {
+      "case": "discussion_stays_draft",
+      "status": "pass"
+    }
+  ],
+  "results": "prototype/demo_result.json",
+  "claim_boundary": "No RAG quality, scalability, semantic verification or production ACL claims."
+}

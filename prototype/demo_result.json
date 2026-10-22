@@ -1,0 +1,120 @@
+{
+  "synthetic": true,
+  "mode": "mechanical_evidence_assembly",
+  "seed": "definition",
+  "evidence": [
+    {
+      "id": "decision",
+      "source": "dingtalk:demo:message-6",
+      "version": 1,
+      "text": "讨论稿：建议下月调整退款口径，尚未批准。",
+      "kind": "discussion",
+      "groups": [
+        "analyst"
+      ],
+      "valid_from": "2026-10-01",
+      "valid_to": null,
+      "decision_state": "draft"
+    },
+    {
+      "id": "definition",
+      "source": "confluence:demo:page-10",
+      "version": 3,
+      "text": "demo.sales.orders.net_amount：净成交金额，排除退款。状态码见退款章节。",
+      "kind": "policy",
+      "groups": [
+        "analyst"
+      ],
+      "valid_from": "2026-10-01",
+      "valid_to": null
+    },
+    {
+      "id": "lineage",
+      "source": "lineage:demo:edge-8",
+      "version": 1,
+      "text": "job-7 generates demo.sales.orders.net_amount; job-7 consumes topic-orders.",
+      "kind": "runtime_metadata",
+      "groups": [
+        "analyst"
+      ],
+      "valid_from": "2026-10-01",
+      "valid_to": null
+    },
+    {
+      "id": "refund",
+      "source": "confluence:demo:page-10",
+      "version": 3,
+      "text": "退款章节：status=REFUNDED 的订单不计入净成交金额。",
+      "kind": "policy",
+      "groups": [
+        "analyst"
+      ],
+      "valid_from": "2026-10-01",
+      "valid_to": null
+    },
+    {
+      "id": "sql",
+      "source": "dap:demo:job-7",
+      "version": 2,
+      "text": "SELECT SUM(amount) FROM demo.sales.orders WHERE is_test = false;",
+      "kind": "implementation",
+      "groups": [
+        "analyst"
+      ],
+      "valid_from": "2026-10-01",
+      "valid_to": null
+    },
+    {
+      "id": "topic",
+      "source": "mq:demo:topic-orders",
+      "version": 4,
+      "text": "topic-orders 的生产者为 demo.order-service；这里只保存元数据。",
+      "kind": "queue_metadata",
+      "groups": [
+        "analyst"
+      ],
+      "valid_from": "2026-10-01",
+      "valid_to": null
+    }
+  ],
+  "paths": [
+    {
+      "source": "definition",
+      "target": "refund",
+      "relation": "requires_context",
+      "evidence": "definition",
+      "quote": "状态码见退款章节",
+      "verified": true
+    },
+    {
+      "source": "definition",
+      "target": "sql",
+      "relation": "implemented_by",
+      "evidence": "lineage",
+      "quote": "job-7 generates demo.sales.orders.net_amount",
+      "verified": true
+    },
+    {
+      "source": "definition",
+      "target": "decision",
+      "relation": "discussed_in",
+      "evidence": "decision",
+      "quote": "建议下月调整退款口径",
+      "verified": true
+    },
+    {
+      "source": "sql",
+      "target": "topic",
+      "relation": "consumes",
+      "evidence": "lineage",
+      "quote": "job-7 consumes topic-orders",
+      "verified": true
+    }
+  ],
+  "gaps": [],
+  "limitations": [
+    "No semantic entailment verification",
+    "No real connector or model",
+    "Current-version selection only; not historical reconstruction"
+  ]
+}

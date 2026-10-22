@@ -1,0 +1,125 @@
+{
+  "updated_at": "2026-10-22",
+  "execution": "external_codex_web_research",
+  "review": "self-review",
+  "paper_reproductions": false,
+  "sources": [
+    {
+      "id": "F1",
+      "title": "Contextual Retrieval",
+      "version": "2024-09-19",
+      "url": "https://www.anthropic.com/research/contextual-retrieval",
+      "reading_depth": "官方技术说明正文",
+      "claim_and_boundary": "片段附文档上下文再索引；不是跨系统权限方案",
+      "read_at": "2026-10-21"
+    },
+    {
+      "id": "F2",
+      "title": "GraphRAG DRIFT",
+      "version": "官方动态文档",
+      "url": "https://microsoft.github.io/graphrag/query/drift_search/",
+      "reading_depth": "官方方法正文",
+      "claim_and_boundary": "社区报告与局部检索/后续问题扩展",
+      "read_at": "2026-10-21"
+    },
+    {
+      "id": "F3",
+      "title": "LazyGraphRAG",
+      "version": "2024-11-25，文章含后续编辑说明",
+      "url": "https://www.microsoft.com/en-us/research/blog/lazygraphrag-setting-a-new-standard-for-quality-and-cost/",
+      "reading_depth": "官方技术说明正文",
+      "claim_and_boundary": "轻量概念共现索引，更多 LLM 工作延后；不假定可直接安装等价开源包",
+      "read_at": "2026-10-21"
+    },
+    {
+      "id": "F4",
+      "title": "HippoRAG 2",
+      "version": "2502.14802v1",
+      "url": "https://arxiv.org/html/2502.14802v1",
+      "reading_depth": "方法相关正文及可见失败分析",
+      "claim_and_boundary": "片段/短语图与 PPR；未复现",
+      "read_at": "2026-10-21"
+    },
+    {
+      "id": "F5",
+      "title": "LightRAG",
+      "version": "2410.05779；动态作者仓库",
+      "url": "https://arxiv.org/abs/2410.05779",
+      "reading_depth": "摘要；作者仓库 https://github.com/HKUDS/LightRAG",
+      "claim_and_boundary": "双层检索；仓库引用功能不等于完整溯源保证",
+      "read_at": "2026-10-21"
+    },
+    {
+      "id": "F6",
+      "title": "CoRAG",
+      "version": "2501.14342v3",
+      "url": "https://arxiv.org/abs/2501.14342v3",
+      "reading_depth": "摘要",
+      "claim_and_boundary": "训练多步检索链；普通工具循环不等于复现",
+      "read_at": "2026-10-21"
+    },
+    {
+      "id": "F7",
+      "title": "SAG",
+      "version": "2608.12129v1，2026-08-12",
+      "url": "https://arxiv.org/html/2608.12129v1",
+      "reading_depth": "方法与局限正文",
+      "claim_and_boundary": "事件实体索引及查询时关联；当前别名和过时事件处理有限",
+      "read_at": "2026-10-21"
+    },
+    {
+      "id": "F8",
+      "title": "PAGE-RAG",
+      "version": "2608.29753v1，2026-08-30",
+      "url": "https://arxiv.org/html/2608.29753v1",
+      "reading_depth": "方法、局限与代码声明正文",
+      "claim_and_boundary": "局部证据图选择；不能找回未进入候选池的事实",
+      "read_at": "2026-10-21"
+    },
+    {
+      "id": "F9",
+      "title": "Hierarchical Abstract Tree / Ψ-RAG",
+      "version": "2605.00529v1，2026-05-01",
+      "url": "https://arxiv.org/html/2605.00529v1",
+      "reading_depth": "方法相关正文",
+      "claim_and_boundary": "层次摘要与多粒度检索；摘要仍需回溯原文",
+      "read_at": "2026-10-21"
+    },
+    {
+      "id": "C1",
+      "title": "W3C PROV-O",
+      "version": "W3C Recommendation",
+      "url": "https://www.w3.org/TR/prov-o/",
+      "reading_depth": "来源关系相关正文",
+      "claim_and_boundary": "Entity/Activity/Agent 和来源链，不保证结论真实",
+      "read_at": "2026-10-22"
+    },
+    {
+      "id": "C2",
+      "title": "OpenLineage Object Model",
+      "version": "页面版本 1.54.0",
+      "url": "https://openlineage.io/docs/spec/object-model/",
+      "reading_depth": "官方正文",
+      "claim_and_boundary": "区分 RunEvent 与设计时事件",
+      "read_at": "2026-10-22"
+    },
+    {
+      "id": "C3",
+      "title": "ALCE",
+      "version": "2305.14627v2",
+      "url": "https://arxiv.org/abs/2305.14627v2",
+      "reading_depth": "摘要",
+      "claim_and_boundary": "引用质量与回答正确性分开评估，未复现",
+      "read_at": "2026-10-22"
+    },
+    {
+      "id": "C4",
+      "title": "Confluence Cloud Search API",
+      "version": "动态官方文档",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-search/",
+      "reading_depth": "官方搜索结果及接口页",
+      "claim_and_boundary": "CQL search 与实体查看权限；不假定调用身份等于最终用户",
+      "read_at": "2026-10-22"
+    }
+  ]
+}

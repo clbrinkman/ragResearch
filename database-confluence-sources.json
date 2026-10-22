@@ -1,0 +1,74 @@
+{
+  "checked_at": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "execution": "external_codex_web_research",
+  "review": "self-review",
+  "native_harness_model_run": false,
+  "experiments_run": false,
+  "sources": [
+    {
+      "id": "D1",
+      "title": "Confluence Cloud Page API",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-page",
+      "reading_depth": "官方搜索正文；直接打开仅返回导航",
+      "supported_claim": "页面 ID、版本、正文与读取权限",
+      "caveats": "当前 Cloud 文档；不是 Data Center 接口"
+    },
+    {
+      "id": "D2",
+      "title": "Confluence Cloud REST v2",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/",
+      "reading_depth": "官方搜索正文",
+      "supported_claim": "cursor/next 分页及调用身份授权",
+      "caveats": "不证明采集账号权限等于最终用户权限"
+    },
+    {
+      "id": "D3",
+      "title": "Confluence Forge events",
+      "url": "https://developer.atlassian.com/platform/forge/events-reference/confluence/",
+      "reading_depth": "官方正文及定位核查",
+      "supported_claim": "更新、权限、删除/空间事件；级联删除不发子项事件",
+      "caveats": "需 Forge 安装及 scopes，部署适用性未验证"
+    },
+    {
+      "id": "D4",
+      "title": "Forge events considerations",
+      "url": "https://developer.atlassian.com/platform/forge/events/",
+      "reading_depth": "官方搜索正文",
+      "supported_claim": "事件以 app system user 处理，可能无法访问受限内容",
+      "caveats": "不是普通 API token 可自动获得的事件流"
+    },
+    {
+      "id": "D5",
+      "title": "Debezium PostgreSQL connector",
+      "url": "https://debezium.io/documentation/reference/stable/connectors/postgresql.html",
+      "reading_depth": "官方正文；DDL/tombstone 定位核查",
+      "supported_claim": "不能报告 DDL 变更；delete 与 tombstone 处理",
+      "caveats": "stable 为动态 URL；其他数据库连接器不可类推"
+    },
+    {
+      "id": "D6",
+      "title": "PostgreSQL columns",
+      "url": "https://www.postgresql.org/docs/current/infoschema-columns.html",
+      "reading_depth": "官方正文",
+      "supported_claim": "数据库目录字段及访问范围",
+      "caveats": "本次页面标为 PostgreSQL 18，实际部署未确定"
+    },
+    {
+      "id": "D7",
+      "title": "dbt Semantic models",
+      "url": "https://docs.getdbt.com/docs/build/semantic-models",
+      "reading_depth": "官方正文及 entities 定位核查",
+      "supported_claim": "实体、维度、时间、指标可结构化表达",
+      "caveats": "文档包含 v1.12+ 语法；实施需固定版本"
+    },
+    {
+      "id": "D8",
+      "title": "Spider 2.0",
+      "url": "https://spider2-sql.github.io/",
+      "reading_depth": "作者项目页及论文摘要；未完整阅读论文",
+      "supported_claim": "企业 SQL 工作流复杂性支持构造真实业务评测",
+      "caveats": "无独立复现；未采纳性能数字"
+    }
+  ]
+}

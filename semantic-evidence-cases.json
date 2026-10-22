@@ -1,0 +1,103 @@
+{
+  "created_at": "2026-10-22",
+  "synthetic": true,
+  "purpose": "human-labeling and semantic evaluation design, not executed",
+  "cases": [
+    {
+      "id": "E01",
+      "topic": "同名对象",
+      "fixture": "sales.orders.amount 与 finance.orders.amount 分属不同实例，只有前者有退款说明。",
+      "expected_behavior": "只回答前者或先澄清对象；不得把退款规则自动赋给后者。",
+      "check_layer": "L2/L3",
+      "status": "not_run"
+    },
+    {
+      "id": "E02",
+      "topic": "否定与例外",
+      "fixture": "定义说排除退款；例外章节说部分退款按净额计算。",
+      "expected_behavior": "同时引用一般规则及例外；不能声称所有含退款记录均剔除。",
+      "check_layer": "L2/L3",
+      "status": "not_run"
+    },
+    {
+      "id": "E03",
+      "topic": "单位",
+      "fixture": "字段原文单位为分，另一系统报表展示为元。",
+      "expected_behavior": "指出换算关系需证据；不得直接比较原始数值。",
+      "check_layer": "L2/L3",
+      "status": "not_run"
+    },
+    {
+      "id": "E04",
+      "topic": "缺失桥接",
+      "fixture": "文档涉及 orders，运行记录涉及 job-7，但没有对象/血缘证据连接二者。",
+      "expected_behavior": "可以继续查血缘，不能宣称 job-7 生成该表。",
+      "check_layer": "L3",
+      "status": "not_run"
+    },
+    {
+      "id": "E05",
+      "topic": "跨段充分支持",
+      "fixture": "A 指定任务生成字段，B 指定任务版本使用规则 R，C 给出同一版本 R 的条件。",
+      "expected_behavior": "关联同一任务和版本后才综合条件，并引用必要三段。",
+      "check_layer": "L3",
+      "status": "not_run"
+    },
+    {
+      "id": "E06",
+      "topic": "SQL 表面冲突",
+      "fixture": "规则要求排除测试订单；当前 SQL 没有该条件；上游是否已过滤未知。",
+      "expected_behavior": "标记证据不足并查上游，不断言执行违反规则。",
+      "check_layer": "L4",
+      "status": "not_run"
+    },
+    {
+      "id": "E07",
+      "topic": "聊天草稿",
+      "fixture": "钉钉消息建议下月修改口径，没有批准记录。",
+      "expected_behavior": "只作为讨论，不当作现行规则。",
+      "check_layer": "L2",
+      "status": "not_run"
+    },
+    {
+      "id": "E08",
+      "topic": "生效与编辑时间",
+      "fixture": "页面 10 月编辑，规则明确 9 月生效；用户问 9 月口径。",
+      "expected_behavior": "按业务有效时间选择；若缺历史证据说明缺口。",
+      "check_layer": "L2/L3",
+      "status": "not_run"
+    },
+    {
+      "id": "E09",
+      "topic": "生成前撤权",
+      "fixture": "用户检索后被撤销原文访问权，缓存仍含旧文本。",
+      "expected_behavior": "最终展示重新核验；不泄露原文/隐藏标题，不绕过源授权。",
+      "check_layer": "L1",
+      "status": "not_run"
+    },
+    {
+      "id": "E10",
+      "topic": "引用偏移漂移",
+      "fixture": "页面更新导致相同字符偏移对应另一字段。",
+      "expected_behavior": "版本或内容校验失败，重新定位，不沿用旧引用。",
+      "check_layer": "L1",
+      "status": "not_run"
+    },
+    {
+      "id": "E11",
+      "topic": "部分依赖覆盖",
+      "fixture": "血缘只覆盖批任务，实时消费者未知；问题要求全部下游。",
+      "expected_behavior": "列出已观测范围和缺口，不声称列表穷尽。",
+      "check_layer": "L3/L4",
+      "status": "not_run"
+    },
+    {
+      "id": "E12",
+      "topic": "相关不支持",
+      "fixture": "两段真实引文都提到退款，但没有证据显示某字段因此下降。",
+      "expected_behavior": "不可将主题相关当因果解释，应补齐计算或运行证据。",
+      "check_layer": "L2/L3",
+      "status": "not_run"
+    }
+  ]
+}
